@@ -58,7 +58,7 @@ if st.button('Price Predict'):
 
     prediction = pipe.predict(input_data)
     # Replace negative price with 0
-    prediction = max(0, prediction)
+    prediction = max(0, prediction[0])
     st.title(f"Predicted Price: {int(prediction)} INR")
 
     # Debug
